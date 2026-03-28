@@ -165,7 +165,7 @@ The core idea is simple but powerful:
 ### 1. Clone Repository
 
 ```bash
-git clone <your-repo-link>
+git clone DhanujaAnbalagan/magicbrush-pro
 cd MagicBrush-Pro
 ```
 
@@ -207,10 +207,20 @@ Open `index.html` in browser or connect via API.
 
 ## 📌 Conclusion
 
-MagicBrush Pro is not just another image editor.
-It’s a **controlled generative system** that balances:
+MagicBrush Pro demonstrates a practical approach to controlled generative image editing by combining diffusion-based generation with deterministic post-processing.
 
-* Creativity (Diffusion)
-* Accuracy (CLIP)
-* Realism (LPIPS)
-* Reliability (Hard Compositing)
+The system’s strength does not come from the diffusion model alone, but from the integration of three critical components:
+
+Hard Compositing ensures strict background preservation, eliminating common inpainting artifacts
+Hybrid Scoring (CLIP + LPIPS) enables automatic selection of outputs that are both semantically correct and visually consistent
+Multi-sample generation (N=4) increases reliability in a stochastic generation process
+
+This combination transforms diffusion from an unpredictable generator into a controlled and reliable editing system.
+
+However, the system still lacks:
+
+geometric precision (object size/shape control)
+high-resolution support beyond 512×512
+automated segmentation (currently manual masking)
+
+Overall, MagicBrush Pro provides a strong foundation for next-generation AI-assisted image editing systems, with clear pathways for improvement through ControlNet, SAM, and super-resolution models.
